@@ -1,0 +1,30 @@
+/* Tailwind CSS - In your index.css or main.css file */
+
+/* Adding rotation and background gradient animation */
+@keyframes rotateBackground {
+    0% {
+      transform: rotate(0deg);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    50% {
+      transform: rotate(180deg);
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+    100% {
+      transform: rotate(360deg);
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  
+  /* Applying animation to the navbar links on mobile */
+  .navbar-links.active {
+    animation: rotateBackground 2s infinite;
+  }
+  
+  /* Navbar links hidden by default on mobile */
+  @media (max-width: 640px) {
+    .navbar-links {
+      display: none;
+    }
+  }
+  

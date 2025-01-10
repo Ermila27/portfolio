@@ -1,0 +1,52 @@
+  /* Custom Animation for rotating bottom border */
+  @keyframes rotate-border-bottom {
+    0% {
+      border-bottom-color: #ff6f61; /* Red */
+    }
+    25% {
+      border-bottom-color: #6a5acd; /* Slate Blue */
+    }
+    50% {
+      border-bottom-color: #32cd32; /* Lime Green */
+    }
+    75% {
+      border-bottom-color: #1e90ff; /* Dodger Blue */
+    }
+    100% {
+      border-bottom-color: #ff6f61; /* Red */
+    }
+  }
+  @keyframes rotate-border-botto {
+    0% {
+      border-color: #b72417; /* Red */
+    }
+    25% {
+      border-color: #6a5acd; /* Slate Blue */
+    }
+    50% {
+      border-color: #32cd32; /* Lime Green */
+    }
+    75% {
+      border-color: #1e90ff; /* Dodger Blue */
+    }
+    100% {
+      border-color: #240bb5; /* Red */
+    }
+  }
+
+  /* Apply animation to the bottom border only when the input is focused */
+  .input-animate:focus  {
+    animation: rotate-border-bottom 4s infinite;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2); /* Optional shadow effect for focus */
+  }
+  #ans{
+    animation: rotate-border-botto 4s infinite;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  }
+   
+#one{
+  background-color: white
+
+  ;
+  height: 300vh;
+}
