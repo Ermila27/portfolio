@@ -28,7 +28,7 @@ export default function Answer() {
     input.value=""
     e.preventDefault();
     
-  axios.post("https://backend-portfolio-z3qh.onrender.com/",
+  axios.post("https://backend-portfolio-z3qh.onrender.com/ask",
     {
       "question" :ques
     }

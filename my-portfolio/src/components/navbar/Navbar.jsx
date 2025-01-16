@@ -16,7 +16,7 @@ const [err,seterr]=useState("")
   const handler=  (e)=>{
     e.preventDefault();
     setloading(true)
-    axios.post("https://backend-portfolio-z3qh.onrender.com/",
+    axios.post("https://backend-portfolio-z3qh.onrender.com/ask",
     {
       "question" :e.target.name
     }
@@ -82,17 +82,17 @@ const [err,seterr]=useState("")
           <NavLink onClick={(e)=>{handler(e)}}
           
           
-           name="about" className="hidden hover:bg-white hover:text-gray-800 px-3 py-2 rounded-md transition duration-300 ease-in-out">
+           name="about" className=" hover:bg-white hover:text-gray-800 px-3 py-2 rounded-md transition duration-300 ease-in-out">
             About
           </NavLink>
           <a onClick={(e)=>{handler(e)}}
          name="projects"  href=""
-            className="hidden hover:bg-white hover:text-gray-800 px-3 py-2 rounded-md transition duration-300 ease-in-out">
+            className=" hover:bg-white hover:text-gray-800 px-3 py-2 rounded-md transition duration-300 ease-in-out">
             projects
           </a>
           <NavLink NavLink to="/contact"
             
-            className="hidden hover:bg-white hover:text-gray-800 px-3 py-2 rounded-md transition duration-300 ease-in-out">
+            className=" hover:bg-white hover:text-gray-800 px-3 py-2 rounded-md transition duration-300 ease-in-out">
            contact 
           </NavLink>
         </div>
