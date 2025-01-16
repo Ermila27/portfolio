@@ -7,7 +7,10 @@ import Project from '../projectcomp/Project';
 import Skill from '../skillcomp/Skill';
 import axios from 'axios';
 import { dataContext } from '../Context';
+
+
 export default function Answer() {
+
    const [ques,setques]=useState("");
    const {state,dispatch}= useContext(dataContext);
    const[ask,setask]=useState(null);
@@ -25,7 +28,7 @@ export default function Answer() {
     input.value=""
     e.preventDefault();
     
-  axios.post("http://127.0.0.1:5001/portfolio-project-79de1/us-central1/api/ask",
+  axios.post("http://localhost:1000/ask",
     {
       "question" :ques
     }
@@ -56,7 +59,7 @@ export default function Answer() {
             {err &&<div className='text-red-400 bg-black    w-1/4 p-1  shadow-lg  border-red-400 text-center border-2'>{err}</div>}
  <form action="" onSubmit={(e)=>{handler(e)}}>
  <div  className='flex  justify-center items-center w-11/12  fixed bottom-4 '>
-          <div   className=' flex items-center justify-center gap-2'>
+          <div  id='' className=' flex items-center justify-center gap-2'>
             <input  
               id='input'
               type="text"

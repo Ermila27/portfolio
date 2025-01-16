@@ -11,7 +11,7 @@ const settings = {
     slidesToShow: 1,         // Number of slides to show at a time
     slidesToScroll: 1,       // Number of slides to scroll at a time
      speed: 1000,
-     pauseOnHover: true,
+     pauseOnHover: 1
  
 };
 

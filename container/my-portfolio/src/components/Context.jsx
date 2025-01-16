@@ -34,8 +34,8 @@ export default function Context({ children }) {
     };
 
     const initialState = {
-       data:"",
-       name:""
+       data:null,
+       name:null
        
     }; // Initial state
 
@@ -46,7 +46,7 @@ export default function Context({ children }) {
 
     return (
         <dataContext.Provider value={{ state, dispatch }}>
-            {children}
+              {children}
         </dataContext.Provider>
     );
 }

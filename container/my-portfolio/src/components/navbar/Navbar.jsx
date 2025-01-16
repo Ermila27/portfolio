@@ -3,8 +3,7 @@ import axios from "axios";
 import  { useState } from "react";
 import {NavLink} from "react-router-dom";
 import { dataContext } from "../Context";
-import { ClockLoader
-} from 'react-spinners';
+import { CircleLoader, ClockLoader} from 'react-spinners';
 const Navbar = () => {
 const [err,seterr]=useState("")
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +16,7 @@ const [err,seterr]=useState("")
   const handler=  (e)=>{
     e.preventDefault();
     setloading(true)
-    axios.post("http://127.0.0.1:5001/portfolio-project-79de1/us-central1/api/ask",
+    axios.post("http://localhost:1000/ask",
     {
       "question" :e.target.name
     }
@@ -52,7 +51,7 @@ const [err,seterr]=useState("")
         <div    className=" group flex text-white p-1  bg-gradient-to-t from-black   border-t-2 border-l-2 border-l-purple-400">
           ErmiasDev  
           <div  className="  flex ml-4  text-white text-opacity-70 h-4">
-           <h3 >icon</h3>
+           {loading?<div><CircleLoader/></div>:<div></div>}
    <div id="menu" className="   hidden h-36 absolute z-50   top-14  sm:left-35 sm:top-14 w-36  justify-center items-center  rounded  bg-gray-900 shadow-lg shadow-purple-600">
   <a  href="https://drive.google.com/file/d/1PxRjrZYzmkhSQYnNrUpqer1HM_UWgdHT/view?usp=drive_link" target="blank"  className=" flex m-4 justify-center items-center bg-black border-2 border-gray-600 p-1 rounded-2xl bottom-4 hover:border-blue-700 transition ">download cv  </a>
        </div>
@@ -83,17 +82,17 @@ const [err,seterr]=useState("")
           <NavLink onClick={(e)=>{handler(e)}}
           
           
-           name="about" className=" hover:bg-white hover:text-gray-800 px-3 py-2 rounded-md transition duration-300 ease-in-out">
+           name="about" className="hidden hover:bg-white hover:text-gray-800 px-3 py-2 rounded-md transition duration-300 ease-in-out">
             About
           </NavLink>
           <a onClick={(e)=>{handler(e)}}
          name="projects"  href=""
-            className=" hover:bg-white hover:text-gray-800 px-3 py-2 rounded-md transition duration-300 ease-in-out">
+            className="hidden hover:bg-white hover:text-gray-800 px-3 py-2 rounded-md transition duration-300 ease-in-out">
             projects
           </a>
           <NavLink NavLink to="/contact"
             
-            className=" hover:bg-white hover:text-gray-800 px-3 py-2 rounded-md transition duration-300 ease-in-out">
+            className="hidden hover:bg-white hover:text-gray-800 px-3 py-2 rounded-md transition duration-300 ease-in-out">
            contact 
           </NavLink>
         </div>
