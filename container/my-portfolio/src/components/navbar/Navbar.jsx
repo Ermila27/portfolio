@@ -16,7 +16,7 @@ const [err,seterr]=useState("")
   const handler=  (e)=>{
     e.preventDefault();
     setloading(true)
-    axios.post("http://localhost:1000/ask",
+    axios.post("https://backend-portfolio-z3qh.onrender.com/",
     {
       "question" :e.target.name
     }
