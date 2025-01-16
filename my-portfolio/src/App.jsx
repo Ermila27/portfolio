@@ -14,6 +14,8 @@ function App() {
       easing: 'ease-in-out', // Easing function
       once:true, // Whether the animation should happen only once
     });
+    document.title = "my personal website";
+
   }, []);
 
 
